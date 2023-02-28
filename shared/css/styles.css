@@ -381,7 +381,9 @@ div[id$="wrapper_text"] {
   width: 100% !important
 }
 .video { 
-  float:right;
+  float: right;
+  width: 873px;
+  margin-right: 80px;
 }
 .emily { 
   position: absolute;
