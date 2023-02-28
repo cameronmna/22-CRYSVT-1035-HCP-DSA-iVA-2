@@ -177,6 +177,10 @@ button {
   margin-top: 2px;
   margin-right: 63px;
 }
+.four2-dot { 
+  right: -97px !important;
+  top: 51px !important;
+}
 .dots52 { 
   margin-right:15px;
 }
