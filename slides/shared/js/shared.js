@@ -4,6 +4,8 @@ window.addEventListener('load', function() {
   var buttons = document.querySelectorAll(".modal-button");
   var closeButtons = document.querySelectorAll(".close");
 
+  handlePageLinks();
+
   buttons.forEach(function(button, index) {
     button.addEventListener("click", function() {
       modals[index].style.display = "block";
@@ -17,4 +19,20 @@ window.addEventListener('load', function() {
       });
     });
   });
+
+  var thisHref, slideName;
+  function handlePageLinks(){
+      document.querySelectorAll('.page-link').forEach(item => {
+          item.addEventListener('click', event => {
+              if ('ontouchstart' in document.documentElement){
+                  event.preventDefault();
+                  thisHref = item.getAttribute('href').replace('../','');
+                  slideName = thisHref + '.zip'
+                  com.veeva.clm.gotoSlide(slideName,"");
+                  return;
+              }
+          });
+      });
+  }
+
 });
